@@ -25,3 +25,34 @@ test ('the host can start the game and the phase move from lobby to the next pha
     fireEvent.click(startBtn);
     expect(screen.getByText('Playing')).toBeInTheDocument();
 })
+
+test ('the next phase inGame displays do NOT display the start game button', () => {
+    render (<GameControl/>);
+    const startBtn = screen.getByText('Start Game');
+    fireEvent.click(startBtn);
+    expect(screen.queryByText('Start Game')).not.toBeInTheDocument();
+})
+
+test ('the inGame phase displays the Murder Event button', () => {
+    render (<GameControl/>);
+    fireEvent.click(screen.getByText('Start Game'));
+    expect(screen.getByText('Murder Event')).toBeInTheDocument();
+})
+
+test ('the inGame phase display the Quiet Night event button', () => {
+    render (<GameControl/>);
+    fireEvent.click(screen.getByText('Start Game'));
+    expect(screen.getByText('Quiet Night Event')).toBeInTheDocument();
+})
+
+test('the inGame phase displays the Banishment Event button', () => {
+    render (<GameControl/>);
+    fireEvent.click(screen.getByText('Start Game'));
+    expect(screen.getByText('Banishment Event')).toBeInTheDocument();
+})
+
+test('the inGame phase displays the Final Banishment Event button', () => {
+    render (<GameControl/>);
+    fireEvent.click(screen.getByText('Start Game'));
+    expect(screen.getByText('Final Banishment Event')).toBeInTheDocument();
+})
