@@ -2,7 +2,7 @@
 
 export const Phase_Labels = {
     'lobby': 'Lobby',
-    'inGame': 'Playing Phase',
+    'inGame': 'Playing',
     'vote': 'Voting Phase',
     'reveal': 'Reveal Phase',
     'gameOver': 'Game Over'

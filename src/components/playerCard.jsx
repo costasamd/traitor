@@ -1,14 +1,13 @@
+/*
+
+This function is a display component that takes in a name, status and points of each player and show them in a card format.
+It import the status from the constant file, the name and points from player list component.
+
+*/
 import {Player_Status} from '../constants';
 
-function PlayerCard({ name, status='alive', points=0}) {
- 
-/*
-    const playerStatus = {
-        alive: 'Alive',
-        dead: 'Eliminated',
-        offline: 'Disconnected'
-    }
-*/
+//have a default value for status and points for the start of the game, and in case nothing is passed down from the player list component.
+function PlayerCard({ name, status='alive', points=0}) { 
 
     const playerStatus = Player_Status;
 

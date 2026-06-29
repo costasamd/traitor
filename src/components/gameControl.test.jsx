@@ -23,5 +23,5 @@ test ('the host can start the game and the phase move from lobby to the next pha
     render (<GameControl/>);
     const startBtn = screen.getByText('Start Game');
     fireEvent.click(startBtn);
-    expect(screen.getByText('Playing Phase')).toBeInTheDocument();
+    expect(screen.getByText('Playing')).toBeInTheDocument();
 })
